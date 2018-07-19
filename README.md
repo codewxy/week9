@@ -4,6 +4,8 @@
 
 生成的output.png放在当前目录下了。
 
+![](output.png)
+
 部分日志:**具体见训练模型地址的最新运行**
 
 ```
@@ -121,7 +123,7 @@ python3 object_detection/dataset_tools/create_data.py --label_map_path=./data/la
 /home/wxy/ai/week9/object_detection/utils/dataset_util.py:75: FutureWarning: The behavior of this method will change in future versions. Use specific 'len(elem)' or 'elem is not None' test instead.
 ```
 
-![1531927614218](C:\Users\WXY\AppData\Local\Temp\1531927614218.png)
+![1531927614218](1531927614218.png)
 
 解决方法：
 
@@ -129,7 +131,7 @@ python3 object_detection/dataset_tools/create_data.py --label_map_path=./data/la
 
 #### 5.2 未找到文件trainval.txt
 
-![1531929205430](C:\Users\WXY\AppData\Local\Temp\1531929205430.png)
+![1531929205430](1531929205430.png)
 
 解决办法：
 
