@@ -1,10 +1,24 @@
-训练模型地址：https://www.tinymind.com/code-wxy/week9
+训练模型地址：https://www.tinymind.com/code-wxy/week9/executions
 
 数据集地址：https://www.tinymind.com/code-wxy/datasets/week9
 
+部分日志:**具体见训练模型地址的最新运行**
 
-
-日志截图:
+```
+INFO:tensorflow:global_step/sec: 0.0663118
+INFO:tensorflow:global step 36: loss = 7.0085 (19.522 sec/step)
+INFO:tensorflow:global step 37: loss = 6.8974 (15.452 sec/step)
+INFO:tensorflow:global step 38: loss = 7.1112 (15.437 sec/step)
+INFO:tensorflow:global step 39: loss = 6.9990 (15.447 sec/step)
+INFO:tensorflow:global step 40: loss = 6.7190 (15.406 sec/step)
+INFO:tensorflow:global step 41: loss = 6.2389 (15.352 sec/step)
+INFO:tensorflow:global step 42: loss = 6.1058 (15.502 sec/step)
+INFO:tensorflow:Recording summary at step 42.
+INFO:tensorflow:global_step/sec: 0.0585489
+INFO:tensorflow:global step 43: loss = 6.3901 (20.804 sec/step)
+INFO:tensorflow:global step 44: loss = 6.0575 (15.445 sec/step)
+INFO:tensorflow:global step 45: loss = 6.2320 (15.483 sec/step)
+```
 
 
 
