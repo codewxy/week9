@@ -2,6 +2,8 @@
 
 数据集地址：https://www.tinymind.com/code-wxy/datasets/week9
 
+生成的output.png放在当前目录下了。
+
 部分日志:**具体见训练模型地址的最新运行**
 
 ```
