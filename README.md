@@ -1,3 +1,15 @@
+# 心得体会
+
+本次作业做完之后感觉难度并不是很大，因为在整个过程中，最开始的数据准备阶段是需要自己根据参考代码进行修改，修改过程以及运行数据生成的过程中，按照下面的步骤进行，基本是没什么错误。其中自己需要制作trainval.txt文件等。在虚拟机中生成了训练和验证数据之后，把文件下载到本地用于上传到tinymind的数据集。
+
+后面的上传代码和运行过程，遇到了些路径没写对的问题，还有部分tinymind的问题，数据集无法上传，数据集无法识别等。
+
+总之由于不需要自己根据论文复现写代码。按照步骤会轻松很多。
+
+
+
+以下是整理的一些资料的步骤。
+
 ## 一、数据准备
 
 ### 1.安装Protobuf和相应的库
@@ -105,7 +117,7 @@ python3 object_detection/dataset_tools/create_data.py --label_map_path=./data/la
 
 - num_classes， 原文件里面为37,这里的数据集为5
 - num_examples， 这个是验证集中有多少数量的图片，请根据图片数量和数据准备脚本中的生成规则自行计算。
-- PATH_TO_BE_CONFIGURED，这个是原文件中预留的字段，一共5个，分别包含预训练模型的位置，训练集数据和label_map文件位置，验证集数据和label_map文件位置。这个字段需要将数据以及配置文件等上传到tinymind之后才能确定路径的具体位置。
+- PATH_TO_BE_CONFIGURED，这个是原文件中预留的字段，一共5个，分别包含预训练模型的位置，训练集数据和label_map文件位置，验证集数据和label_map文件位置。这个字段需要将数据以及配置文件等上传到tinymind之后才能确定路径的具体位置（把PATH_TO_BE_CONFIGURED替换成了/data/code-wxy/week9这个路径）。
 - num_steps，这个是训练多少step，后面的训练启动脚本会用到这个字段，直接将原始的200000改成0.注意不要添加或者删除空格等，后面的训练启动脚本使用sed对这个字段进行检测替换，如果改的有问题会影像训练启动脚本的执行。不通过run.sh本地运行需要将这个数字改成一个合适的step数，改成0的话会有问题。
 - max_evals，这个是验证每次跑几轮，这里直接改成1即可，即每个训练验证循环只跑一次验证。
 - eval_input_reader 里面的shuffle， 这个是跟eval步骤的数据reader有关，如果不使用GPU进行训练的话，这里需要从false改成true，不然会导致错误，详细内容参阅 <https://github.com/tensorflow/models/issues/1936>
@@ -115,4 +127,20 @@ python3 object_detection/dataset_tools/create_data.py --label_map_path=./data/la
 > config文件需要跟代码一起上传，运行的时候会先被复制到output文件夹里面。
 
 ## 三、下载预训练模型
+
+由于本模型采用的是mobilenet模型ssd检测框架，在如下的文档中<https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md> 
+
+下载了[ssd_mobilenet_v1_coco](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz) 。
+
+在本地解压后，将如下三个文件放入数据集文件中备用
+
+model.ckpt.data-00000-of-00001
+
+model.ckpt.index
+
+model.ckpt.meta
+
+
+
+## 四、上传文件以及数据开始训练
 
