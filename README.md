@@ -1,3 +1,13 @@
+训练模型地址：https://www.tinymind.com/code-wxy/week9
+
+数据集地址：https://www.tinymind.com/code-wxy/datasets/week9
+
+
+
+日志截图:
+
+
+
 # 心得体会
 
 本次作业做完之后感觉难度并不是很大，因为在整个过程中，最开始的数据准备阶段是需要自己根据参考代码进行修改，修改过程以及运行数据生成的过程中，按照下面的步骤进行，基本是没什么错误。其中自己需要制作trainval.txt文件等。在虚拟机中生成了训练和验证数据之后，把文件下载到本地用于上传到tinymind的数据集。
@@ -12,11 +22,11 @@
 
 ## 一、数据准备
 
-### 1.安装Protobuf和相应的库
+### 1.安装相应的库
 
 ```shell
-安装Protobuf
-sudo apt-get install protobuf-compiler python-pil python-lxml python-tk
+安装Protobuf、python3-pil、python3-lxml、python3-tk等
+sudo apt-get install protobuf-compiler python3-pil python3-lxml python3-tk
 
 安装相应的库
 pip install Cython
